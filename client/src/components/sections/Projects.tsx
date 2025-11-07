@@ -7,7 +7,7 @@ const projects = [
   {
     title: "Zerodha Clone",
     description: "Developed a full-stack Zerodha clone simulating core functionalities of a stock trading platform",
-    preview: "../public/zerodha.png",
+    preview: "/zerodha.png",
     url: "https://zerodha-frontend-tau.vercel.app/",
     technologies: ["MongoDB", "ExpressJS", "ReactJS", "NodeJS", "TailwindCSS"],
     bullets: [
@@ -19,7 +19,7 @@ const projects = [
   {
     title: "Real Time Weather App",
     description: "Gives Real Time Weather details of cities around the world using React and API.",
-    preview: "../public/real-time-weather-app.png",
+    preview: "/real-time-weather-app.png",
     url: "https://real-time-weather-tau.vercel.app/",
     technologies: ["React", "API", "Material-UI"],
     bullets: [
@@ -30,7 +30,7 @@ const projects = [
   {
     title: "GYM Website",
     description: "Fitness-focused website",
-    preview: "../public/gym-website.png",
+    preview: "/gym-website.png",
     url: "https://rafitness.vercel.app/",
     technologies: ["HTML", "CSS", "JavaScript"],
     bullets: [
@@ -41,14 +41,14 @@ const projects = [
   {
     title: "Amazon Clone",
     description: "Pixel perfect clone of Amazon landing page",
-    preview: "../public/amazon-clone.png",
+    preview: "/amazon-clone.png",
     url: "https://amazons-cloneweb.vercel.app/",
     technologies: ["HTML", "CSS"]
   },
   {
     title: "Tic Tac Toe Game",
     description: "Interactive game with logic",
-    preview: "../public/tic-tac-toe.png",
+    preview: "/tic-tac-toe.png",
     url: "https://tic-tac-toe-game-zeta-one.vercel.app/",
     technologies: ["HTML", "CSS", "JavaScript"]
   }
