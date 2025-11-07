@@ -2,13 +2,17 @@ import { motion } from "framer-motion";
 import { 
   SiHtml5, SiCss3, SiJavascript, SiReact, SiBootstrap, 
   SiTailwindcss, SiTypescript, SiNodedotjs, SiExpress,
-  SiMysql, SiMongodb, SiGit, SiGithub 
+  SiMysql, SiMongodb, SiGit, SiGithub, 
+  SiNextdotjs,
+  SiPrisma,
+  SiPostgresql
 } from "react-icons/si";
 
 const skills = [
   { name: "HTML", icon: SiHtml5 },
   { name: "CSS", icon: SiCss3 },
   { name: "JavaScript", icon: SiJavascript },
+  { name: "Next.js", icon: SiNextdotjs },
   { name: "React.js", icon: SiReact },
   { name: "Bootstrap", icon: SiBootstrap },
   { name: "Tailwind CSS", icon: SiTailwindcss },
@@ -17,6 +21,8 @@ const skills = [
   { name: "Express.js", icon: SiExpress },
   { name: "MySQL", icon: SiMysql },
   { name: "MongoDB", icon: SiMongodb },
+  { name: "Prisma", icon: SiPrisma },
+  { name: "PostgreSQL", icon: SiPostgresql },
   { name: "Git", icon: SiGit },
   { name: "GitHub", icon: SiGithub }
 ];
@@ -33,6 +39,20 @@ const education = [
     institution: "Andhra Education Society's Junior College",
     year: "2019-2021",
     details: "Computer Science"
+  }
+];
+
+const experience = [
+  {
+    role: "Full Stack Developer Intern",
+    company: "",
+    duration: "Aug 2025 – Present",
+    highlights: [
+      "Migrated a React app to Next.js improving performance and SEO.",
+      "Built backend modules for a job portal using NestJS, Prisma, PostgreSQL.",
+      "Created REST APIs for authentication and job management.",
+      "Collaborated in an agile team to deliver full-stack features."
+    ]
   }
 ];
 
@@ -60,10 +80,7 @@ export default function About() {
             >
               <div className="prose prose-lg dark:prose-invert">
                 <p>
-                Full Stack developer skilled in frontend and backend technologies, including HTML, CSS, JavaScript, 
-                React.js, Node.js, Express.js, MongoDB, and Mongoose. Experienced in building responsive applications, 
-                integrating RESTful APIs, and optimizing performance. Quick learner, detail-oriented, with a passion for 
-                innovation. 
+                Motivated and detail-oriented Full Stack Developer with hands-on experience in building responsive, scalable, and high-performance web applications. Skilled in React.js, Next.js, TypeScript, Node.js, Express.js, MongoDB, MySQL, Prisma, and PostgreSQL, with expertise in RESTful API integration, database management, and frontend optimization. Currently contributing as a Full Stack Developer Intern, working on migrating a React app to Next.js and developing backend modules for a job portal using NestJS. A quick learner with a passion for innovation, clean code, and delivering user-focused digital solutions. 
                 </p>
                 <p>
                   My journey in software development started with a curiosity about how
@@ -101,6 +118,46 @@ export default function About() {
               </div>
             </motion.div>
           </div>
+
+          {/* Experience section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="mt-16"
+          >
+            <h2 className="text-2xl font-semibold mb-8">Experience</h2>
+            <div className="space-y-6">
+              {experience.map((exp, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                  className="bg-card rounded-lg p-6 border border-border"
+                >
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                    <div>
+                      <h3 className="text-xl font-medium text-[#FFA94D]">{exp.role}</h3>
+                      {exp.company && (
+                        <p className="text-muted-foreground mt-1">{exp.company}</p>
+                      )}
+                    </div>
+                    <p className="text-sm text-muted-foreground">{exp.duration}</p>
+                  </div>
+                  <ul className="mt-4 space-y-2 list-disc list-inside">
+                    {exp.highlights.map((item, highlightIndex) => (
+                      <li key={highlightIndex} className="text-muted-foreground">
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
 
           {/* Skills section below */}
           <motion.div
